@@ -3,40 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Riya Salian — Data Scientist, AI/ML practitioner, and healthcare AI researcher." />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Riya Salian | Data Scientist & AI Researcher</title>
+
+  <meta
+    name="description"
+    content="Riya Salian — Data Scientist specializing in personalization, LLM applications, applied machine learning, and AI research."
+  />
+
+  <meta name="theme-color" content="#0b0d12" />
+
+  <title>Riya Salian | Data Scientist · ML · GenAI</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
+
     :root {
-      --bg: #080b14;
-      --bg-soft: #0e1322;
-      --card: rgba(18, 24, 41, .72);
-      --card-solid: #11172a;
-      --text: #f4f7ff;
-      --muted: #aab3c8;
+      --bg: #090b10;
+      --bg-2: #0d1017;
+      --card: #11151d;
+      --card-hover: #151a24;
+
+      --text: #f5f7fb;
+      --muted: #9ba5b5;
+      --muted-2: #6f7888;
+
       --line: rgba(255,255,255,.09);
-      --accent: #7dd3fc;
-      --accent-2: #c4b5fd;
-      --accent-3: #5eead4;
-      --glow: rgba(125, 211, 252, .18);
-      --max: 1180px;
-      --radius: 24px;
+      --line-hover: rgba(255,255,255,.16);
+
+      --accent: #9be7ff;
+      --accent-2: #b9a7ff;
+      --accent-3: #7ee8cf;
+
+      --max: 1160px;
+      --radius: 18px;
+
+      --shadow:
+        0 20px 70px rgba(0,0,0,.25);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; }
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background:
-        radial-gradient(circle at 15% 5%, rgba(125,211,252,.10), transparent 28rem),
-        radial-gradient(circle at 90% 15%, rgba(196,181,253,.10), transparent 30rem),
+        radial-gradient(
+          circle at 15% 0%,
+          rgba(155,231,255,.07),
+          transparent 28rem
+        ),
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(185,167,255,.06),
+          transparent 30rem
+        ),
         var(--bg);
+
       color: var(--text);
       font-family: "DM Sans", sans-serif;
       line-height: 1.7;
@@ -48,77 +91,157 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      opacity: .16;
+      opacity: .08;
+
       background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, black, transparent 80%);
+        linear-gradient(
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 56px 56px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 75%
+        );
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
 
     .container {
-      width: min(var(--max), calc(100% - 40px));
+      width: min(
+        var(--max),
+        calc(100% - 42px)
+      );
+
       margin: auto;
     }
 
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
     .nav {
       position: fixed;
-      z-index: 20;
-      top: 18px;
+
+      top: 16px;
       left: 50%;
+
       transform: translateX(-50%);
-      width: min(1080px, calc(100% - 28px));
-      padding: 10px 12px 10px 18px;
+
+      width: min(
+        1080px,
+        calc(100% - 28px)
+      );
+
+      z-index: 100;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(8,11,20,.68);
+
+      padding: 9px 12px 9px 18px;
+
+      background:
+        rgba(9,11,16,.82);
+
       backdrop-filter: blur(18px);
+
       border: 1px solid var(--line);
       border-radius: 999px;
-      box-shadow: 0 12px 50px rgba(0,0,0,.25);
+
+      box-shadow:
+        0 12px 50px rgba(0,0,0,.25);
     }
 
     .brand {
-      font-family: "Space Grotesk";
+      font-family: "Space Grotesk", sans-serif;
       font-weight: 700;
       letter-spacing: -.04em;
+      font-size: 1rem;
     }
 
-    .brand span { color: var(--accent); }
+    .brand span {
+      color: var(--accent);
+    }
 
     .nav-links {
       display: flex;
-      gap: 5px;
+      align-items: center;
+      gap: 3px;
       list-style: none;
     }
 
     .nav-links a {
-      padding: 8px 13px;
+      display: block;
+
+      padding: 7px 12px;
+
       color: var(--muted);
-      font-size: .9rem;
+
+      font-size: .84rem;
+
       border-radius: 999px;
+
       transition: .2s ease;
     }
 
     .nav-links a:hover {
       color: var(--text);
-      background: rgba(255,255,255,.07);
+      background: rgba(255,255,255,.06);
     }
 
+    .nav-cta {
+      background: var(--text);
+      color: #090b10 !important;
+      font-weight: 700;
+    }
+
+    .nav-cta:hover {
+      background: #ffffff !important;
+      color: #090b10 !important;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
     .hero {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 130px 0 80px;
+      min-height: 94vh;
+
+      display: flex;
+      align-items: center;
+
+      padding:
+        150px 0 90px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap: 70px;
+
+      grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(300px, .65fr);
+
+      gap: 80px;
+
       align-items: center;
     }
 
@@ -126,726 +249,2012 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      color: var(--accent-3);
-      font-size: .85rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+
       margin-bottom: 22px;
+
+      color: var(--accent-3);
+
+      font-size: .76rem;
+      font-weight: 700;
+
+      letter-spacing: .14em;
+      text-transform: uppercase;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+
       border-radius: 50%;
+
       background: var(--accent-3);
-      box-shadow: 0 0 18px var(--accent-3);
+
+      box-shadow:
+        0 0 15px var(--accent-3);
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: "Space Grotesk", sans-serif;
       line-height: 1.08;
       letter-spacing: -.045em;
     }
 
     h1 {
-      font-size: clamp(3.4rem, 7vw, 6.7rem);
       max-width: 850px;
+
+      font-size:
+        clamp(3.2rem, 7vw, 6.2rem);
     }
 
-    .gradient-text {
-      background: linear-gradient(100deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
+    .gradient {
+      background:
+        linear-gradient(
+          100deg,
+          var(--accent),
+          var(--accent-2) 55%,
+          var(--accent-3)
+        );
+
       -webkit-background-clip: text;
       background-clip: text;
+
       color: transparent;
     }
 
-    .hero-copy {
-      max-width: 730px;
-      margin-top: 28px;
-      font-size: 1.15rem;
+    .hero-description {
+      max-width: 700px;
+
+      margin-top: 27px;
+
       color: var(--muted);
+
+      font-size: 1.12rem;
     }
 
-    .hero-copy strong { color: var(--text); }
+    .hero-description strong {
+      color: var(--text);
+      font-weight: 600;
+    }
 
     .hero-actions {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
-      margin-top: 32px;
+
+      gap: 10px;
+
+      margin-top: 30px;
     }
 
     .button {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      font-weight: 700;
-      transition: .25s ease;
-    }
+      justify-content: center;
 
-    .button.primary {
-      background: var(--text);
-      color: #0a0d15;
-      border-color: var(--text);
+      gap: 8px;
+
+      padding:
+        11px 17px;
+
+      border-radius: 999px;
+
+      border: 1px solid var(--line);
+
+      font-size: .88rem;
+      font-weight: 700;
+
+      transition: .22s ease;
     }
 
     .button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      border-color: var(--line-hover);
     }
 
-    .button.secondary:hover { background: rgba(255,255,255,.07); }
-
-    .portrait-wrap {
-      position: relative;
-      display: grid;
-      place-items: center;
+    .button-primary {
+      background: var(--text);
+      color: #090b10;
+      border-color: var(--text);
     }
 
-    .portrait-wrap::before {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(125,211,252,.18), rgba(196,181,253,.15));
-      filter: blur(35px);
-    }
-
-    .portrait {
-      position: relative;
-      width: min(330px, 75vw);
-      aspect-ratio: 1;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.18);
-      box-shadow: 0 30px 90px rgba(0,0,0,.45);
-    }
-
-    .floating-card {
-      position: absolute;
-      right: -15px;
-      bottom: 10px;
-      padding: 13px 16px;
-      background: rgba(13,18,32,.88);
-      backdrop-filter: blur(15px);
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      font-size: .82rem;
-      color: var(--muted);
-    }
-
-    .floating-card strong {
-      display: block;
+    .button-secondary {
       color: var(--text);
-      font-size: 1rem;
+      background: rgba(255,255,255,.025);
     }
 
-    section { padding: 105px 0; }
+    .button-secondary:hover {
+      background: rgba(255,255,255,.07);
+    }
 
-    .section-label {
+
+    /* =========================================================
+       PROFILE
+    ========================================================= */
+
+    .profile {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile::before {
+      content: "";
+
+      position: absolute;
+
+      width: 330px;
+      height: 330px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(155,231,255,.13),
+          rgba(185,167,255,.11)
+        );
+
+      filter: blur(45px);
+    }
+
+    .profile-image {
+      position: relative;
+
+      width: min(
+        310px,
+        72vw
+      );
+
+      aspect-ratio: 1;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(255,255,255,.15);
+
+      box-shadow:
+        0 35px 90px rgba(0,0,0,.45);
+    }
+
+    .profile-label {
+      position: absolute;
+
+      right: -10px;
+      bottom: 15px;
+
+      max-width: 245px;
+
+      padding:
+        13px 15px;
+
+      background:
+        rgba(13,17,25,.92);
+
+      backdrop-filter: blur(16px);
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 14px;
+
+      font-size: .78rem;
+
+      color: var(--muted);
+
+      box-shadow:
+        0 15px 45px rgba(0,0,0,.25);
+    }
+
+    .profile-label strong {
+      display: block;
+
+      color: var(--text);
+
+      font-size: .92rem;
+
+      margin-bottom: 2px;
+    }
+
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
+
+    section {
+      padding: 105px 0;
+    }
+
+    .section-kicker {
+      margin-bottom: 10px;
+
       color: var(--accent);
-      font-size: .8rem;
+
+      font-size: .72rem;
       font-weight: 700;
+
       letter-spacing: .15em;
       text-transform: uppercase;
-      margin-bottom: 12px;
     }
 
     .section-title {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      margin-bottom: 16px;
+      max-width: 850px;
+
+      margin-bottom: 14px;
+
+      font-size:
+        clamp(2rem, 4vw, 3.4rem);
     }
 
     .section-intro {
       max-width: 720px;
+
+      margin-bottom: 40px;
+
       color: var(--muted);
-      margin-bottom: 42px;
     }
 
-    .metrics {
+
+    /* =========================================================
+       IMPACT
+    ========================================================= */
+
+    .impact-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 12px;
     }
 
-    .metric, .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      backdrop-filter: blur(14px);
-    }
-
-    .metric {
+    .impact-card {
       padding: 25px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.045),
+          rgba(255,255,255,.018)
+        );
+
+      border:
+        1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      transition: .22s ease;
     }
 
-    .metric-number {
-      font-family: "Space Grotesk";
+    .impact-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--line-hover);
+    }
+
+    .impact-number {
+      font-family: "Space Grotesk", sans-serif;
+
       font-size: 2rem;
       font-weight: 700;
-      color: var(--text);
+
+      letter-spacing: -.04em;
     }
 
-    .metric-label {
-      color: var(--muted);
-      font-size: .9rem;
+    .impact-label {
       margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: .84rem;
+
+      line-height: 1.5;
     }
 
-    .experience {
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .experience-list {
       display: grid;
-      gap: 16px;
+      gap: 14px;
     }
 
     .experience-card {
       display: grid;
-      grid-template-columns: 185px 1fr;
+
+      grid-template-columns:
+        190px
+        1fr;
+
       gap: 35px;
+
       padding: 30px;
+
+      background:
+        rgba(17,21,29,.8);
+
+      border:
+        1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      transition: .25s ease;
+    }
+
+    .experience-card:hover {
+      border-color: var(--line-hover);
+
+      background:
+        rgba(21,26,36,.9);
+
+      box-shadow: var(--shadow);
     }
 
     .experience-date {
       color: var(--accent);
-      font-size: .82rem;
+
+      font-size: .75rem;
       font-weight: 700;
-      text-transform: uppercase;
+
       letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
-    .experience-company {
-      color: var(--muted);
-      margin-top: 6px;
-      font-size: .95rem;
+    .experience-location {
+      margin-top: 5px;
+
+      color: var(--muted-2);
+
+      font-size: .8rem;
     }
 
     .experience-card h3 {
-      font-size: 1.45rem;
-      margin-bottom: 12px;
+      font-size: 1.4rem;
+
+      margin-bottom: 2px;
     }
 
-    .experience-card p {
+    .company {
+      margin-bottom: 12px;
+
       color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .experience-description {
+      color: var(--muted);
+
       max-width: 850px;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+
+      gap: 7px;
+
       margin-top: 18px;
     }
 
     .tag {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.035);
-      color: #c9d2e6;
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-size: .76rem;
+      padding:
+        5px 9px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 7px;
+
+      background:
+        rgba(255,255,255,.035);
+
+      color: #cbd3e2;
+
+      font-size: .72rem;
     }
 
-    .research-grid, .project-grid {
+
+    /* =========================================================
+       RESEARCH
+    ========================================================= */
+
+    .research-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 17px;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 15px;
     }
 
-    .research-card, .project-card {
+    .research-card {
       overflow: hidden;
+
+      background: var(--card);
+
+      border:
+        1px solid var(--line);
+
+      border-radius: var(--radius);
+
       transition: .25s ease;
     }
 
-    .research-card:hover, .project-card:hover {
+    .research-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(125,211,252,.25);
-      box-shadow: 0 20px 50px rgba(0,0,0,.2);
+
+      border-color:
+        rgba(155,231,255,.25);
+
+      box-shadow: var(--shadow);
     }
 
-    .card-image {
+    .research-image {
       width: 100%;
       height: 185px;
+
       object-fit: cover;
+
       display: block;
-      background: #0c1220;
+
+      background: #0d1118;
     }
 
-    .card-body { padding: 23px; }
-
-    .card-body h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
+    .research-content {
+      padding: 22px;
     }
 
-    .card-body p {
+    .research-content h3 {
+      font-size: 1.18rem;
+
+      margin-bottom: 9px;
+    }
+
+    .research-content p {
       color: var(--muted);
-      font-size: .91rem;
+
+      font-size: .87rem;
     }
 
-    .card-link {
-      display: inline-flex;
-      margin-top: 17px;
-      color: var(--accent);
+
+    /* =========================================================
+       PROJECTS
+    ========================================================= */
+
+    .project-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+    .project-card {
+      overflow: hidden;
+
+      background: var(--card);
+
+      border:
+        1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      transition: .25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+
+      border-color: var(--line-hover);
+
+      box-shadow: var(--shadow);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 175px;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+    .project-content {
+      padding: 21px;
+    }
+
+    .project-content h3 {
+      font-size: 1.12rem;
+
+      margin-bottom: 8px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+
       font-size: .86rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+
+      margin-top: 16px;
+
+      color: var(--accent);
+
+      font-size: .8rem;
       font-weight: 700;
     }
 
-    .skills {
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 17px;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 14px;
     }
 
-    .skill-card { padding: 28px; }
+    .skill-card {
+      padding: 26px;
+
+      background: var(--card);
+
+      border:
+        1px solid var(--line);
+
+      border-radius: var(--radius);
+    }
 
     .skill-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 16px;
+      font-size: 1.05rem;
+
+      margin-bottom: 15px;
     }
 
-    .skill-card p {
-      color: var(--muted);
-      line-height: 2;
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
     }
 
-    .skill-card p span {
-      display: inline-block;
-      margin: 0 5px 7px 0;
-      padding: 5px 10px;
-      border-radius: 8px;
-      background: rgba(255,255,255,.045);
-      border: 1px solid var(--line);
-      color: #dbe4f7;
-      font-size: .82rem;
-    }
+    .skill {
+      padding:
+        5px 9px;
 
-    .dance {
-      position: relative;
-      overflow: hidden;
-      padding: 42px;
+      border:
+        1px solid var(--line);
+
+      border-radius: 7px;
+
       background:
-        radial-gradient(circle at 85% 10%, rgba(196,181,253,.18), transparent 22rem),
-        linear-gradient(135deg, rgba(18,24,41,.92), rgba(12,17,31,.92));
+        rgba(255,255,255,.035);
+
+      color: #d5ddec;
+
+      font-size: .75rem;
     }
 
-    .dance h2 { font-size: 2rem; margin-bottom: 12px; }
 
-    .dance p {
+    /* =========================================================
+       PERSONAL
+    ========================================================= */
+
+    .personal-card {
+      padding: 40px;
+
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(185,167,255,.10),
+          transparent 22rem
+        ),
+        var(--card);
+
+      border:
+        1px solid var(--line);
+
+      border-radius: var(--radius);
+    }
+
+    .personal-card h2 {
+      margin-bottom: 12px;
+
+      font-size: 2rem;
+    }
+
+    .personal-card p {
       max-width: 720px;
+
       color: var(--muted);
     }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
 
     .contact {
       text-align: center;
-      padding-bottom: 65px;
+
+      padding-top: 80px;
+      padding-bottom: 70px;
     }
 
-    .contact .section-intro { margin: 0 auto 28px; }
+    .contact .section-intro {
+      margin:
+        0 auto 27px;
+    }
 
-    .socials {
+    .contact-actions {
       display: flex;
+
       justify-content: center;
-      gap: 10px;
+
       flex-wrap: wrap;
+
+      gap: 10px;
     }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
 
     footer {
-      padding: 25px 0 40px;
-      border-top: 1px solid var(--line);
-      color: #707b91;
-      font-size: .82rem;
+      padding:
+        25px 0 38px;
+
+      border-top:
+        1px solid var(--line);
+
       text-align: center;
+
+      color: var(--muted-2);
+
+      font-size: .76rem;
     }
+
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
 
     .reveal {
       opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .7s ease, transform .7s ease;
+
+      transform:
+        translateY(18px);
+
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
     }
 
     .reveal.visible {
       opacity: 1;
-      transform: translateY(0);
+
+      transform:
+        translateY(0);
     }
 
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; text-align: center; }
-      .hero-copy { margin-left: auto; margin-right: auto; }
-      .hero-actions { justify-content: center; }
-      .portrait-wrap { order: -1; }
-      .metrics { grid-template-columns: repeat(2, 1fr); }
-      .research-grid, .project-grid { grid-template-columns: 1fr 1fr; }
-      .skills { grid-template-columns: 1fr; }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 55px;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .profile {
+        order: -1;
+      }
+
+      .impact-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .research-grid,
+      .project-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
     }
 
-    @media (max-width: 680px) {
-      .nav { top: 9px; }
-      .nav-links { display: none; }
-      .container { width: min(100% - 28px, var(--max)); }
-      .hero { padding-top: 115px; }
-      h1 { font-size: 3.35rem; }
-      section { padding: 75px 0; }
-      .metrics, .research-grid, .project-grid { grid-template-columns: 1fr; }
-      .experience-card { grid-template-columns: 1fr; gap: 12px; }
-      .experience-date { margin-bottom: -3px; }
-      .dance { padding: 28px; }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        top: 9px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .container {
+        width:
+          min(
+            100% - 28px,
+            var(--max)
+          );
+      }
+
+      .hero {
+        min-height: auto;
+
+        padding:
+          130px 0 75px;
+      }
+
+      h1 {
+        font-size:
+          clamp(
+            3rem,
+            15vw,
+            4.4rem
+          );
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .impact-grid,
+      .research-grid,
+      .project-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 25px;
+      }
+
+      .profile-image {
+        width: 245px;
+      }
+
+      .profile-label {
+        right: 0;
+        bottom: 0;
+      }
+
+      .personal-card {
+        padding: 28px;
+      }
+
+      .contact {
+        padding-top: 65px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
+
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
   <nav class="nav">
-    <a class="brand" href="#top">Riya Salian<span>.</span></a>
+
+    <a
+      class="brand"
+      href="#top"
+    >
+      Riya Salian<span>.</span>
+    </a>
+
     <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+
+      <li>
+        <a href="#impact">Impact</a>
+      </li>
+
+      <li>
+        <a href="#experience">Experience</a>
+      </li>
+
+      <li>
+        <a href="#research">Research</a>
+      </li>
+
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+
+      <li>
+        <a
+          href="#contact"
+          class="nav-cta"
+        >
+          Contact
+        </a>
+      </li>
+
     </ul>
+
   </nav>
 
+
   <main id="top">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
     <section class="hero">
+
       <div class="container hero-grid">
+
+
         <div class="reveal">
-          <div class="eyebrow"><span class="dot"></span> Data Science · AI · Research</div>
-          <h1>Building intelligent systems that turn <span class="gradient-text">data into impact.</span></h1>
-          <p class="hero-copy">
+
+          <div class="eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            Data Science · ML · GenAI · Research
+
+          </div>
+
+
+          <h1>
+
+            I build
+            <span class="gradient">
+              intelligent systems
+            </span>
+            that create measurable impact.
+
+          </h1>
+
+
+          <p class="hero-description">
+
             I'm <strong>Riya</strong>, a Data Scientist focused on
             <strong>personalization, LLM applications, and applied machine learning</strong>,
             with a research background in <strong>AI for healthcare</strong>.
+
           </p>
+
+
           <div class="hero-actions">
-            <a class="button primary" href="#work">Explore my work ↓</a>
-            <a class="button secondary" href="mailto:rsalian1@outlook.com">Let's connect ↗</a>
-            <a class="button secondary" href="https://github.com/RiyaSalian1611" target="_blank" rel="noopener">GitHub ↗</a>
+
+            <a
+              class="button button-primary"
+              href="#experience"
+            >
+              Explore my work ↓
+            </a>
+
+
+            <!-- Replace with actual resume filename -->
+            <a
+              class="button button-secondary"
+              href="Riya_Salian_Resume.pdf"
+              target="_blank"
+            >
+              Resume ↗
+            </a>
+
+
+            <a
+              class="button button-secondary"
+              href="https://github.com/RiyaSalian1611"
+              target="_blank"
+              rel="noopener"
+            >
+              GitHub ↗
+            </a>
+
+
+            <!-- Replace # with actual LinkedIn URL -->
+            <a
+              class="button button-secondary"
+              href="#"
+            >
+              LinkedIn ↗
+            </a>
+
           </div>
+
         </div>
 
-        <div class="portrait-wrap reveal">
-          <img class="portrait" src="images/profilePic.jpeg" alt="Riya Salian">
-          <div class="floating-card">
+
+        <div class="profile reveal">
+
+          <img
+            class="profile-image"
+            src="images/profilePic.jpeg"
+            alt="Riya Salian"
+          />
+
+          <div class="profile-label">
+
             <strong>Riya Salian</strong>
-            Data Scientist | GenAI | Personalization | Decision Intelligence
+
+            Data Scientist · Personalization ·
+            GenAI · Decision Intelligence
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="work">
+
+
+    <!-- =====================================================
+         IMPACT
+    ====================================================== -->
+
+    <section id="impact">
+
       <div class="container">
-        <div class="section-label">Impact</div>
-        <h2 class="section-title">A little more than models.</h2>
+
+        <div class="section-kicker">
+          Selected impact
+        </div>
+
+        <h2 class="section-title">
+          Beyond models. Measurable outcomes.
+        </h2>
+
         <p class="section-intro">
-          I enjoy taking ambiguous problems from idea → experimentation → production,
-          especially where machine learning can create measurable business or real-world impact.
+
+          I enjoy taking ambiguous problems from
+          experimentation to production, especially where
+          machine learning can create measurable business
+          or real-world impact.
+
         </p>
 
-        <div class="metrics">
-          <div class="metric reveal">
-            <div class="metric-number">~$2M</div>
-            <div class="metric-label">incremental revenue from personalization</div>
+
+        <div class="impact-grid">
+
+
+          <div class="impact-card reveal">
+
+            <div class="impact-number">
+              ~$2M
+            </div>
+
+            <div class="impact-label">
+              Incremental revenue from personalization
+            </div>
+
           </div>
-          <div class="metric reveal">
-            <div class="metric-number">60K+</div>
-            <div class="metric-label">monthly customer responses processed with GenAI</div>
+
+
+          <div class="impact-card reveal">
+
+            <div class="impact-number">
+              60K+
+            </div>
+
+            <div class="impact-label">
+              Monthly customer responses processed with GenAI
+            </div>
+
           </div>
-          <div class="metric reveal">
-            <div class="metric-number">10K+</div>
-            <div class="metric-label">ServiceNow tickets classified with LLMs</div>
+
+
+          <div class="impact-card reveal">
+
+            <div class="impact-number">
+              10K+
+            </div>
+
+            <div class="impact-label">
+              ServiceNow tickets classified with LLMs
+            </div>
+
           </div>
-          <div class="metric reveal">
-            <div class="metric-number">8%</div>
-            <div class="metric-label">churn reduction demonstrated through experimentation</div>
+
+
+          <div class="impact-card reveal">
+
+            <div class="impact-number">
+              8%
+            </div>
+
+            <div class="impact-label">
+              Churn reduction demonstrated through experimentation
+            </div>
+
           </div>
+
+
         </div>
 
-        <div style="height: 45px"></div>
-
-        <div class="experience">
-          <article class="card experience-card reveal">
-            <div>
-              <div class="experience-date">Nov 2024 — Present</div>
-              <div class="experience-company">Phoenix, Arizona</div>
-            </div>
-            <div>
-              <h3>Data Scientist · Personalization</h3>
-              <div class="experience-company">PetSmart</div>
-              <p>
-                Building production ML and GenAI solutions across personalization and customer intelligence.
-                Work includes collaborative-filtering recommendation systems, experimentation, LLM-based
-                classification, evaluation frameworks, and scalable data/ML pipelines.
-              </p>
-              <div class="tags">
-                <span class="tag">Recommendation Systems</span>
-                <span class="tag">LLMs</span>
-                <span class="tag">A/B Testing</span>
-                <span class="tag">Databricks</span>
-                <span class="tag">Spark</span>
-                <span class="tag">Python</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card experience-card reveal">
-            <div>
-              <div class="experience-date">2022 — 2024</div>
-              <div class="experience-company">ASU · Mayo Clinic</div>
-            </div>
-            <div>
-              <h3>AI Researcher · Healthcare</h3>
-              <div class="experience-company">IMPACT Research Lab</div>
-              <p>
-                Conducted applied AI research across physiological time-series, computer vision,
-                diabetes technology, and psychological stress detection. Developed transformer-based
-                approaches and contributed to peer-reviewed research.
-              </p>
-              <div class="tags">
-                <span class="tag">Healthcare AI</span>
-                <span class="tag">Transformers</span>
-                <span class="tag">Time Series</span>
-                <span class="tag">Computer Vision</span>
-                <span class="tag">Deep Learning</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card experience-card reveal">
-            <div>
-              <div class="experience-date">Aug 2020 — Jul 2022</div>
-              <div class="experience-company">India</div>
-            </div>
-            <div>
-              <h3>Software Engineer</h3>
-              <div class="experience-company">Lowe's</div>
-              <p>
-                Built and supported production software with a strong foundation in backend systems,
-                APIs, cloud infrastructure, databases, testing, and scalable application development.
-              </p>
-              <div class="tags">
-                <span class="tag">Java</span>
-                <span class="tag">Spring Boot</span>
-                <span class="tag">React</span>
-                <span class="tag">AWS</span>
-                <span class="tag">Kubernetes</span>
-              </div>
-            </div>
-          </article>
-        </div>
       </div>
+
     </section>
+
+
+
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
+
+    <section id="experience">
+
+      <div class="container">
+
+        <div class="section-kicker">
+          Experience
+        </div>
+
+        <h2 class="section-title">
+          Building ML systems in the real world.
+        </h2>
+
+        <p class="section-intro">
+
+          From production personalization systems and
+          GenAI applications to healthcare AI research,
+          my work sits at the intersection of machine
+          learning, experimentation, and engineering.
+
+        </p>
+
+
+        <div class="experience-list">
+
+
+          <!-- PETSMART -->
+
+          <article class="experience-card reveal">
+
+            <div>
+
+              <div class="experience-date">
+                Nov 2024 — Present
+              </div>
+
+              <div class="experience-location">
+                Phoenix, Arizona
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Data Scientist · Personalization
+              </h3>
+
+              <div class="company">
+                PetSmart
+              </div>
+
+              <p class="experience-description">
+
+                Building production ML and GenAI solutions
+                across personalization and customer intelligence.
+                Work includes collaborative-filtering recommendation
+                systems, experimentation, LLM-based classification,
+                evaluation frameworks, and scalable data/ML pipelines.
+
+              </p>
+
+
+              <div class="tags">
+
+                <span class="tag">
+                  Recommendation Systems
+                </span>
+
+                <span class="tag">
+                  LLMs
+                </span>
+
+                <span class="tag">
+                  GenAI
+                </span>
+
+                <span class="tag">
+                  A/B Testing
+                </span>
+
+                <span class="tag">
+                  Databricks
+                </span>
+
+                <span class="tag">
+                  Spark
+                </span>
+
+                <span class="tag">
+                  Python
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- RESEARCH -->
+
+          <article class="experience-card reveal">
+
+            <div>
+
+              <div class="experience-date">
+                2022 — 2024
+              </div>
+
+              <div class="experience-location">
+                ASU · Mayo Clinic
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                AI Researcher · Healthcare
+              </h3>
+
+              <div class="company">
+                IMPACT Research Lab
+              </div>
+
+              <p class="experience-description">
+
+                Conducted applied AI research across physiological
+                time-series, computer vision, diabetes technology,
+                and psychological stress detection. Developed
+                transformer-based approaches and contributed to
+                peer-reviewed research.
+
+              </p>
+
+
+              <div class="tags">
+
+                <span class="tag">
+                  Healthcare AI
+                </span>
+
+                <span class="tag">
+                  Transformers
+                </span>
+
+                <span class="tag">
+                  Time Series
+                </span>
+
+                <span class="tag">
+                  Computer Vision
+                </span>
+
+                <span class="tag">
+                  Deep Learning
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- LOWES -->
+
+          <article class="experience-card reveal">
+
+            <div>
+
+              <div class="experience-date">
+                Aug 2020 — Jul 2022
+              </div>
+
+              <div class="experience-location">
+                India
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Software Engineer
+              </h3>
+
+              <div class="company">
+                Lowe's
+              </div>
+
+              <p class="experience-description">
+
+                Built and supported production software with
+                a foundation in backend systems, APIs, cloud
+                infrastructure, databases, testing, and
+                scalable application development.
+
+              </p>
+
+
+              <div class="tags">
+
+                <span class="tag">
+                  Java
+                </span>
+
+                <span class="tag">
+                  Spring Boot
+                </span>
+
+                <span class="tag">
+                  React
+                </span>
+
+                <span class="tag">
+                  AWS
+                </span>
+
+                <span class="tag">
+                  Kubernetes
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESEARCH
+    ====================================================== -->
 
     <section id="research">
+
       <div class="container">
-        <div class="section-label">Research</div>
-        <h2 class="section-title">AI for healthcare, where the stakes are real.</h2>
+
+        <div class="section-kicker">
+          Research
+        </div>
+
+        <h2 class="section-title">
+          AI for healthcare, where the stakes are real.
+        </h2>
+
         <p class="section-intro">
-          My research work explores how modern machine learning can extract useful signals from
-          complex physiological and behavioral data.
+
+          My research work explores how modern machine learning
+          can extract useful signals from complex physiological
+          and behavioral data.
+
         </p>
+
 
         <div class="research-grid">
-          <article class="card research-card reveal">
-            <img class="card-image" src="images/fulls/ecg.jpeg" alt="ECG research">
-            <div class="card-body">
-              <h3>Cardiac Disease Detection</h3>
+
+
+          <article class="research-card reveal">
+
+            <img
+              class="research-image"
+              src="images/fulls/ecg.jpeg"
+              alt="ECG research"
+            />
+
+            <div class="research-content">
+
+              <h3>
+                Cardiac Disease Detection
+              </h3>
+
               <p>
-                Attention-guided multidimensional temporal transformers and Vision Transformers
-                for coronary artery disease detection using stress ECG signals.
+
+                Attention-guided multidimensional temporal
+                transformers and Vision Transformers for coronary
+                artery disease detection using stress ECG signals.
+
               </p>
+
             </div>
+
           </article>
 
-          <article class="card research-card reveal">
-            <img class="card-image" src="images/fulls/diabetes.jpeg" alt="Diabetes research">
-            <div class="card-body">
-              <h3>Diabetes Technology</h3>
+
+
+          <article class="research-card reveal">
+
+            <img
+              class="research-image"
+              src="images/fulls/diabetes.jpeg"
+              alt="Diabetes research"
+            />
+
+            <div class="research-content">
+
+              <h3>
+                Diabetes Technology
+              </h3>
+
               <p>
-                Android-based diabetes management technology integrating glucose monitoring,
-                workout routines, and insulin delivery workflows with an artificial pancreas controller.
+
+                Android-based diabetes management technology
+                integrating glucose monitoring, workout routines,
+                and insulin delivery workflows with an artificial
+                pancreas controller.
+
               </p>
+
             </div>
+
           </article>
 
-          <article class="card research-card reveal">
-            <img class="card-image" src="images/fulls/stress.jpeg" alt="Stress detection research">
-            <div class="card-body">
-              <h3>Psychological Stress Detection</h3>
+
+
+          <article class="research-card reveal">
+
+            <img
+              class="research-image"
+              src="images/fulls/stress.jpeg"
+              alt="Stress detection research"
+            />
+
+            <div class="research-content">
+
+              <h3>
+                Psychological Stress Detection
+              </h3>
+
               <p>
-                Deep learning approaches including LTCNs, CNNs, and Transformers to study
-                psychological stress using physiological and salivary cortisol measurements.
+
+                Deep learning approaches including LTCNs,
+                CNNs, and Transformers to study psychological
+                stress using physiological and salivary cortisol
+                measurements.
+
               </p>
+
             </div>
+
           </article>
+
+
         </div>
+
       </div>
+
     </section>
+
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
 
     <section id="projects">
+
       <div class="container">
-        <div class="section-label">Selected work</div>
-        <h2 class="section-title">Things I've built.</h2>
+
+        <div class="section-kicker">
+          Selected projects
+        </div>
+
+        <h2 class="section-title">
+          Things I've built.
+        </h2>
+
         <p class="section-intro">
-          A mix of ML, NLP, computer vision, systems, and data visualization projects.
+
+          A mix of ML, NLP, computer vision, systems,
+          and data visualization projects.
+
           More code lives on GitHub.
+
         </p>
+
 
         <div class="project-grid">
-          <article class="card project-card reveal">
-            <img class="card-image" src="images/fulls/sentiment.png" alt="LLM sentiment visualization">
-            <div class="card-body">
-              <h3>LLM Sentiment Analysis</h3>
-              <p>LLM-powered sentiment analysis with visual summaries of positive, neutral, and negative sentiment distributions.</p>
-              <a class="card-link" href="https://github.com/RiyaSalian1611/LLM-Sentiment-Analysis-Visualization" target="_blank" rel="noopener">View on GitHub ↗</a>
+
+
+          <article class="project-card reveal">
+
+            <img
+              class="project-image"
+              src="images/fulls/sentiment.png"
+              alt="LLM Sentiment Analysis"
+            />
+
+            <div class="project-content">
+
+              <h3>
+                LLM Sentiment Analysis
+              </h3>
+
+              <p>
+
+                LLM-powered sentiment analysis with visual
+                summaries of positive, neutral, and negative
+                sentiment distributions.
+
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/RiyaSalian1611/LLM-Sentiment-Analysis-Visualization"
+                target="_blank"
+                rel="noopener"
+              >
+                View on GitHub ↗
+              </a>
+
             </div>
+
           </article>
 
-          <article class="card project-card reveal">
-            <img class="card-image" src="images/fulls/viz_preview.png" alt="EventVizPredict visualization">
-            <div class="card-body">
-              <h3>EventVizPredict</h3>
-              <p>LSTM-based sequence modeling and NLP on Twitter data for event prediction, paired with interactive D3.js visualizations.</p>
-              <a class="card-link" href="https://github.com/RiyaSalian1611/EventVizPredict" target="_blank" rel="noopener">View on GitHub ↗</a>
+
+
+          <article class="project-card reveal">
+
+            <img
+              class="project-image"
+              src="images/fulls/viz_preview.png"
+              alt="EventVizPredict"
+            />
+
+            <div class="project-content">
+
+              <h3>
+                EventVizPredict
+              </h3>
+
+              <p>
+
+                LSTM-based sequence modeling and NLP on
+                Twitter data for event prediction, paired
+                with interactive D3.js visualizations.
+
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/RiyaSalian1611/EventVizPredict"
+                target="_blank"
+                rel="noopener"
+              >
+                View on GitHub ↗
+              </a>
+
             </div>
+
           </article>
 
-          <article class="card project-card reveal">
-            <img class="card-image" src="images/fulls/fraud_detection.webp" alt="FraudLens">
-            <div class="card-body">
-              <h3>FraudLens</h3>
-              <p>Graph-based fraud detection using semantic web mining, Neo4j features, Random Forest, and XGBoost.</p>
-              <a class="card-link" href="https://github.com/RiyaSalian1611/FraudLens" target="_blank" rel="noopener">View on GitHub ↗</a>
+
+
+          <article class="project-card reveal">
+
+            <img
+              class="project-image"
+              src="images/fulls/fraud_detection.webp"
+              alt="FraudLens"
+            />
+
+            <div class="project-content">
+
+              <h3>
+                FraudLens
+              </h3>
+
+              <p>
+
+                Graph-based fraud detection using semantic
+                web mining, Neo4j features, Random Forest,
+                and XGBoost.
+
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/RiyaSalian1611/FraudLens"
+                target="_blank"
+                rel="noopener"
+              >
+                View on GitHub ↗
+              </a>
+
             </div>
+
           </article>
 
-          <article class="card project-card reveal">
-            <img class="card-image" src="images/fulls/dexcom.webp" alt="Dexcom CGM project">
-            <div class="card-body">
-              <h3>CGM Dexcom G6</h3>
-              <p>Continuous glucose monitoring integration exploring a more seamless diabetes-management experience.</p>
-              <a class="card-link" href="https://github.com/RiyaSalian1611/DexcomG6" target="_blank" rel="noopener">View on GitHub ↗</a>
+
+
+          <article class="project-card reveal">
+
+            <img
+              class="project-image"
+              src="images/fulls/dexcom.webp"
+              alt="Dexcom G6"
+            />
+
+            <div class="project-content">
+
+              <h3>
+                CGM Dexcom G6
+              </h3>
+
+              <p>
+
+                Continuous glucose monitoring integration
+                exploring a more seamless diabetes-management
+                experience.
+
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/RiyaSalian1611/DexcomG6"
+                target="_blank"
+                rel="noopener"
+              >
+                View on GitHub ↗
+              </a>
+
             </div>
+
           </article>
 
-          <article class="card project-card reveal">
-            <img class="card-image" src="images/fulls/surfaceDefect.png" alt="Surface defect detection">
-            <div class="card-body">
-              <h3>Surface Defect Detection</h3>
-              <p>Computer-vision pipeline for automated detection of defects in ceramic tiles.</p>
-              <a class="card-link" href="https://github.com/RiyaSalian1611/automated-surfaceDefect-detection" target="_blank" rel="noopener">View on GitHub ↗</a>
+
+
+          <article class="project-card reveal">
+
+            <img
+              class="project-image"
+              src="images/fulls/surfaceDefect.png"
+              alt="Surface Defect Detection"
+            />
+
+            <div class="project-content">
+
+              <h3>
+                Surface Defect Detection
+              </h3>
+
+              <p>
+
+                Computer-vision pipeline for automated
+                detection of defects in ceramic tiles.
+
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/RiyaSalian1611/automated-surfaceDefect-detection"
+                target="_blank"
+                rel="noopener"
+              >
+                View on GitHub ↗
+              </a>
+
             </div>
+
           </article>
 
-          <article class="card project-card reveal">
-            <img class="card-image" src="images/fulls/watchdog-python.png" alt="WatchdogFS Monitor">
-            <div class="card-body">
-              <h3>WatchdogFS Monitor</h3>
-              <p>Python-based filesystem monitoring with event-driven triggers for creation, modification, deletion, and movement events.</p>
-              <a class="card-link" href="https://github.com/RiyaSalian1611/WatchdogFS-MonitorPy" target="_blank" rel="noopener">View on GitHub ↗</a>
+
+
+          <article class="project-card reveal">
+
+            <img
+              class="project-image"
+              src="images/fulls/watchdog-python.png"
+              alt="WatchdogFS Monitor"
+            />
+
+            <div class="project-content">
+
+              <h3>
+                WatchdogFS Monitor
+              </h3>
+
+              <p>
+
+                Python-based filesystem monitoring with
+                event-driven triggers for creation,
+                modification, deletion, and movement events.
+
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/RiyaSalian1611/WatchdogFS-MonitorPy"
+                target="_blank"
+                rel="noopener"
+              >
+                View on GitHub ↗
+              </a>
+
             </div>
+
           </article>
+
+
         </div>
+
       </div>
+
     </section>
+
+
+
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
 
     <section id="skills">
+
       <div class="container">
-        <div class="section-label">Toolkit</div>
-        <h2 class="section-title">The stack behind the work.</h2>
 
-        <div class="skills">
-          <div class="card skill-card reveal">
-            <h3>AI / Machine Learning</h3>
-            <p>
-              <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>Transformers</span>
-              <span>LLMs</span><span>NLP</span><span>Computer Vision</span><span>Time Series</span>
-              <span>Recommendation Systems</span><span>Scikit-learn</span><span>XGBoost</span>
-            </p>
-          </div>
-
-          <div class="card skill-card reveal">
-            <h3>Data & Cloud</h3>
-            <p>
-              <span>Databricks</span><span>Apache Spark</span><span>Snowflake</span><span>AWS</span>
-              <span>GCP</span><span>Docker</span><span>Kubernetes</span><span>SQL</span>
-              <span>Feature Stores</span><span>ML Pipelines</span>
-            </p>
-          </div>
-
-          <div class="card skill-card reveal">
-            <h3>Software Engineering</h3>
-            <p>
-              <span>Java</span><span>Spring Boot</span><span>Python</span><span>React</span>
-              <span>Node.js</span><span>REST APIs</span><span>Microservices</span><span>Git</span>
-              <span>Jenkins</span><span>Postman</span><span>Testing</span>
-            </p>
-          </div>
-
-          <div class="card skill-card reveal">
-            <h3>Research & Product</h3>
-            <p>
-              <span>Experimentation</span><span>A/B Testing</span><span>Model Evaluation</span>
-              <span>Human-in-the-loop</span><span>LLM-as-Judge</span><span>Healthcare AI</span>
-              <span>Technical Communication</span><span>Applied Research</span>
-            </p>
-          </div>
+        <div class="section-kicker">
+          Technical toolkit
         </div>
+
+        <h2 class="section-title">
+          The stack behind the work.
+        </h2>
+
+
+        <div class="skills-grid">
+
+
+          <div class="skill-card reveal">
+
+            <h3>
+              AI / Machine Learning
+            </h3>
+
+            <div class="skill-list">
+
+              <span class="skill">Python</span>
+              <span class="skill">PyTorch</span>
+              <span class="skill">TensorFlow</span>
+              <span class="skill">Transformers</span>
+              <span class="skill">LLMs</span>
+              <span class="skill">NLP</span>
+              <span class="skill">Computer Vision</span>
+              <span class="skill">Time Series</span>
+              <span class="skill">Recommendation Systems</span>
+              <span class="skill">Scikit-learn</span>
+              <span class="skill">XGBoost</span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="skill-card reveal">
+
+            <h3>
+              Data & Cloud
+            </h3>
+
+            <div class="skill-list">
+
+              <span class="skill">Databricks</span>
+              <span class="skill">Apache Spark</span>
+              <span class="skill">Snowflake</span>
+              <span class="skill">AWS</span>
+              <span class="skill">GCP</span>
+              <span class="skill">Docker</span>
+              <span class="skill">Kubernetes</span>
+              <span class="skill">SQL</span>
+              <span class="skill">Feature Stores</span>
+              <span class="skill">ML Pipelines</span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="skill-card reveal">
+
+            <h3>
+              Software Engineering
+            </h3>
+
+            <div class="skill-list">
+
+              <span class="skill">Java</span>
+              <span class="skill">Spring Boot</span>
+              <span class="skill">Python</span>
+              <span class="skill">React</span>
+              <span class="skill">Node.js</span>
+              <span class="skill">REST APIs</span>
+              <span class="skill">Microservices</span>
+              <span class="skill">Git</span>
+              <span class="skill">Jenkins</span>
+              <span class="skill">Postman</span>
+              <span class="skill">Testing</span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="skill-card reveal">
+
+            <h3>
+              Research & Product
+            </h3>
+
+            <div class="skill-list">
+
+              <span class="skill">Experimentation</span>
+              <span class="skill">A/B Testing</span>
+              <span class="skill">Model Evaluation</span>
+              <span class="skill">Human-in-the-loop</span>
+              <span class="skill">LLM-as-Judge</span>
+              <span class="skill">Healthcare AI</span>
+              <span class="skill">Technical Communication</span>
+              <span class="skill">Applied Research</span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
       </div>
+
     </section>
+
+
+
+    <!-- =====================================================
+         PERSONAL
+    ====================================================== -->
 
     <section>
+
       <div class="container">
-        <div class="card dance reveal">
-          <div class="section-label">Outside the model</div>
-          <h2>And yes, I dance. 💃</h2>
+
+        <div class="personal-card reveal">
+
+          <div class="section-kicker">
+            Outside the model
+          </div>
+
+          <h2>
+            And yes, I dance. 💃
+          </h2>
+
           <p>
-            I've trained in classical Indian dance for 13 years and performed on stage.
-            Dancing has given me a different kind of discipline: patience with repetition,
-            comfort with imperfection, and the ability to communicate without saying a word.
-            Apparently, those skills transfer surprisingly well to debugging.
+
+            I've trained in classical Indian dance for
+            13 years and performed on stage.
+
+            Dancing has given me a different kind of discipline:
+            patience with repetition, comfort with imperfection,
+            and the ability to communicate without saying a word.
+
+            Apparently, those skills transfer surprisingly well
+            to debugging.
+
           </p>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="contact" class="contact">
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      id="contact"
+      class="contact"
+    >
+
       <div class="container">
-        <div class="section-label">Let's connect</div>
-        <h2 class="section-title">Have an interesting problem?</h2>
-        <p class="section-intro">
-          I'm always interested in thoughtful conversations around AI, machine learning,
-          research, personalization, and building things that actually make it into the real world.
-        </p>
-        <div class="socials">
-          <a class="button primary" href="mailto:rsalian1@outlook.com">Email me ↗</a>
-          <a class="button secondary" href="https://github.com/RiyaSalian1611" target="_blank" rel="noopener">GitHub ↗</a>
+
+        <div class="section-kicker">
+          Let's connect
         </div>
+
+        <h2 class="section-title">
+          Have an interesting problem?
+        </h2>
+
+        <p class="section-intro">
+
+          I'm interested in thoughtful conversations around
+          AI, machine learning, research, personalization,
+          and building things that actually make it into
+          the real world.
+
+        </p>
+
+
+        <div class="contact-actions">
+
+          <a
+            class="button button-primary"
+            href="mailto:rsalian1@outlook.com"
+          >
+            Email me ↗
+          </a>
+
+
+          <a
+            class="button button-secondary"
+            href="https://github.com/RiyaSalian1611"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub ↗
+          </a>
+
+
+          <!-- Replace # with actual LinkedIn URL -->
+
+          <a
+            class="button button-secondary"
+            href="#"
+          >
+            LinkedIn ↗
+          </a>
+
+        </div>
+
       </div>
+
     </section>
+
+
   </main>
 
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
   <footer>
-    © <span id="year"></span> Riya Salian · Built with HTML, CSS & a mildly unreasonable amount of curiosity.
+
+    © <span id="year"></span>
+    Riya Salian ·
+    Built with HTML, CSS & curiosity.
+
   </footer>
 
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+    /* Dynamic year */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* Scroll reveal */
+
+    const observer =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold: 0.12
         }
-      });
-    }, { threshold: 0.12 });
 
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+      );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(
+        (element) => {
+
+          observer.observe(
+            element
+          );
+
+        }
+      );
+
   </script>
+
+
 </body>
 </html>
